@@ -47,9 +47,11 @@ export const burgerConstructorSlice = createSlice({
     },
     removeFromBurgerConstructor: (
       state,
-      { payload }: PayloadAction<number>
+      { payload }: PayloadAction<string>
     ) => {
-      state.ingredients.splice(payload, 1);
+      state.ingredients = state.ingredients.filter(
+        (ingredient) => ingredient.id !== payload
+      );
     },
     reorderBurgerConstructor: (
       state,
