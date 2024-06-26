@@ -67,7 +67,7 @@ const App = () => {
               >
                 #${orderNumber && orderNumber.padStart(6, '0')}
               </p>
-              {/* <OrderStatus status={orderInfo && orderInfo.status} /> */}
+              <OrderStatus status={''} />
               <OrderInfo />
             </div>
           }
