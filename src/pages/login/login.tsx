@@ -18,7 +18,6 @@ export const Login: FC = () => {
       navigate('/');
     } catch (error) {
       console.error('Failed to login:', error);
-      // Handle error, maybe set some state to show error message
     }
   };
 

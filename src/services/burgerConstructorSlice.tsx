@@ -44,6 +44,9 @@ export const burgerConstructorSlice = createSlice({
           state.ingredients.push(payload);
         }
       }
+      // prepare: (ingredient: TIngredient) => ({
+      //   payload: {...ingredient, id: uuid()}
+      // })
     },
     removeFromBurgerConstructor: (
       state,
