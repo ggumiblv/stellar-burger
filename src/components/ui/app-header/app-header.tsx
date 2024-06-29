@@ -9,7 +9,6 @@ import {
 } from '@zlden/react-developer-burger-ui-components';
 import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
-import { isPending } from '@reduxjs/toolkit';
 
 export const AppHeaderUI: FC<TAppHeaderUIProps> = ({ userName }) => (
   <header className={styles.header}>
@@ -45,7 +44,9 @@ export const AppHeaderUI: FC<TAppHeaderUIProps> = ({ userName }) => (
         </NavLink>
       </div>
       <div className={styles.logo}>
-        <Logo className='' />
+        <NavLink to='/'>
+          <Logo className='' />
+        </NavLink>
       </div>
       <div className={styles.link_position_last}>
         <NavLink
