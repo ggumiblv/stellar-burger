@@ -2,15 +2,15 @@ import { FC, useEffect, useMemo } from 'react';
 import { Preloader } from '../ui/preloader';
 import { OrderInfoUI } from '../ui/order-info';
 import { TIngredient } from '@utils-types';
-import { RootState, useDispatch, useSelector } from '../../services/store';
+import { useDispatch, useSelector } from '../../services/store';
 import { getOrder } from '../../services/orderSlice';
 import { useParams } from 'react-router-dom';
 
 export const OrderInfo: FC = () => {
   const dispatch = useDispatch();
   const { number } = useParams<{ number: string }>();
-  const orderData = useSelector((state: RootState) => state.order.info);
-  const ingredients = useSelector((state: RootState) => state.ingredients.data);
+  const orderData = useSelector((state) => state.order.info);
+  const ingredients = useSelector((state) => state.ingredients.data);
 
   useEffect(() => {
     if (number) {
@@ -18,7 +18,6 @@ export const OrderInfo: FC = () => {
     }
   }, [dispatch, number]);
 
-  /* Готовим данные для отображения */
   const orderInfo = useMemo(() => {
     if (!orderData || !ingredients.length) return null;
 

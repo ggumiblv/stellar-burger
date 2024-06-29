@@ -1,4 +1,4 @@
-import { RootState, useSelector } from '../../services/store';
+import { useSelector } from '../../services/store';
 
 import styles from './constructor-page.module.css';
 
@@ -9,9 +9,7 @@ import { FC } from 'react';
 import { RequestStatus } from '@utils-types';
 
 export const ConstructorPage: FC = () => {
-  const ingredientsStatus = useSelector(
-    (state: RootState) => state.ingredients.status
-  );
+  const ingredientsStatus = useSelector((state) => state.ingredients.status);
   const isIngredientsLoading = ingredientsStatus === RequestStatus.Loading;
 
   return (

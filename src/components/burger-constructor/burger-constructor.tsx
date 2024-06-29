@@ -1,13 +1,13 @@
 import { FC, useMemo } from 'react';
 import { TConstructorIngredient } from '@utils-types';
 import { BurgerConstructorUI } from '@ui';
-import { useSelector } from '../../services/store';
-import { RootState } from '../../services/store';
+import { useSelector, useDispatch } from '../../services/store';
 import { useNavigate } from 'react-router-dom';
 import { userSelectors } from '../../services/userSlice';
-import { useDispatch } from '../../services/store';
-import { BurgerConstructorActions } from '../../services/burgerConstructorSlice';
-import { orderBurger } from '../../services/burgerConstructorSlice';
+import {
+  BurgerConstructorActions,
+  orderBurger
+} from '../../services/burgerConstructorSlice';
 import { RequestStatus } from '@utils-types';
 
 export const BurgerConstructor: FC = () => {
@@ -15,17 +15,13 @@ export const BurgerConstructor: FC = () => {
   const dispatch = useDispatch();
   const user = useSelector(userSelectors.getUser);
 
-  const constructorItems = useSelector(
-    (state: RootState) => state.burgerConstructor
-  );
+  const constructorItems = useSelector((state) => state.burgerConstructor);
 
   const orderRequest =
-    useSelector((state: RootState) => state.burgerConstructor.requestStatus) ===
+    useSelector((state) => state.burgerConstructor.requestStatus) ===
     RequestStatus.Loading;
 
-  const orderModalData = useSelector(
-    (state: RootState) => state.burgerConstructor.order
-  );
+  const orderModalData = useSelector((state) => state.burgerConstructor.order);
 
   const onOrderClick = () => {
     if (!constructorItems.bun || orderRequest) return;
