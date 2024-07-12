@@ -17,9 +17,9 @@ jest.mock('@api', () => ({
   updateUserApi: jest.fn()
 }));
   
-describe('userSlice reducer', () => {
+describe('userSlice редьюсер', () => {
 
-  const testUser = { name: 'Gulnaz', email: 'ggumi@yandex.com', password: 'password' };
+  const testUser = { name: 'Gulnaz', email: 'ggumi@yandex.com', password: 'hehehe' };
   const updatedUser = { name: 'Updated User', email: 'updated@example.com', password: 'updated-password' };
   const userData = { name: 'Test', email: 'test@example.com', password: 'password123' };
   const loginData = { email: 'test@example.com', password: 'password123' };
