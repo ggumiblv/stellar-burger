@@ -2,7 +2,7 @@
     "success": true,
     "data": [
       {
-        "_id": "643d69a5c3f7b9001cfa093c",
+        "_id": "1",
         "name": "Краторная булка N-200i",
         "type": "bun",
         "proteins": 80,
@@ -15,7 +15,7 @@
         "image_large": "https://code.s3.yandex.net/react/code/bun-02-large.png"
       },
       {
-        "_id": "643d69a5c3f7b9001cfa0941",
+        "_id": "2",
         "name": "Биокотлета из марсианской Магнолии",
         "type": "main",
         "proteins": 420,
@@ -28,7 +28,7 @@
         "image_large": "https://code.s3.yandex.net/react/code/meat-01-large.png"
       },
       {
-        "_id": "643d69a5c3f7b9001cfa093d",
+        "_id": "3",
         "name": "Флюоресцентная булка R2-D3",
         "type": "bun",
         "proteins": 44,
@@ -41,7 +41,7 @@
         "image_large": "https://code.s3.yandex.net/react/code/bun-01-large.png"
       },
       {
-        "_id": "643d69a5c3f7b9001cfa0944",
+        "_id": "4",
         "name": "Соус традиционный галактический",
         "type": "sauce",
         "proteins": 42,
@@ -54,7 +54,7 @@
         "image_large": "https://code.s3.yandex.net/react/code/sauce-03-large.png"
       },
       {
-        "_id": "643d69a5c3f7b9001cfa0946",
+        "_id": "5",
         "name": "Хрустящие минеральные кольца",
         "type": "main",
         "proteins": 808,
