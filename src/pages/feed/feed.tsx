@@ -1,10 +1,10 @@
 import { Preloader } from '@ui';
 import { FeedUI } from '@ui-pages';
 import { FC } from 'react';
-import { useSelector } from '../../services/store';
-import { useDispatch } from '../../services/store';
+import { useSelector } from '../../services/store/store';
+import { useDispatch } from '../../services/store/store';
 import { useEffect } from 'react';
-import { getFeeds } from '../../services/feedSlice';
+import { getFeeds } from '../../services/feedSlice/feedSlice';
 
 export const Feed: FC = () => {
   const dispatch = useDispatch();

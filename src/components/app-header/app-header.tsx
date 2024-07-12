@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { useSelector } from '../../services/store';
+import { useSelector } from '../../services/store/store';
 import { AppHeaderUI } from '@ui';
 
 export const AppHeader: FC = () => {

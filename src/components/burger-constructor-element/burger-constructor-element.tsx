@@ -1,8 +1,8 @@
 import { FC, memo } from 'react';
 import { BurgerConstructorElementUI } from '@ui';
 import { BurgerConstructorElementProps } from './type';
-import { useDispatch } from '../../services/store';
-import { BurgerConstructorActions } from '../../services/burgerConstructorSlice';
+import { useDispatch } from '../../services/store/store';
+import { BurgerConstructorActions } from '../../services/burgerConstuctorSlice/burgerConstructorSlice';
 
 export const BurgerConstructorElement: FC<BurgerConstructorElementProps> = memo(
   ({ ingredient, index, totalItems }) => {

@@ -5,14 +5,14 @@ import { orderBurgerApi } from '@api';
 import { TOrder, RequestStatus } from '@utils-types';
 import { v4 as uuidv4 } from 'uuid';
 
-interface TConstructorState {
+export interface TConstructorState {
   bun: TConstructorIngredient | null;
   ingredients: TConstructorIngredient[];
   order: TOrder | null;
   requestStatus: RequestStatus;
 }
 
-const initialState: TConstructorState = {
+export const initialState: TConstructorState = {
   bun: null,
   ingredients: [],
   order: null,
@@ -44,9 +44,6 @@ export const burgerConstructorSlice = createSlice({
           state.ingredients.push(payload);
         }
       }
-      // prepare: (ingredient: TIngredient) => ({
-      //   payload: {...ingredient, id: uuid()}
-      // })
     },
     removeFromBurgerConstructor: (
       state,

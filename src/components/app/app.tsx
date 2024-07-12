@@ -22,9 +22,9 @@ import { Modal } from '@components';
 import { OrderInfo } from '@components';
 import { IngredientDetails } from '@components';
 import { ProtectedRoute } from '../protected-route/ProtectedRoute';
-import { useDispatch } from '../../services/store';
-import { getIngredients } from '../../services/ingredientsSlice';
-import { checkUserAuth, userActions } from '../../services/userSlice';
+import { useDispatch } from '../../services/store/store';
+import { getIngredients } from '../../services/ingredientsSlice/ingredientsSlice';
+import { checkUserAuth, userActions } from '../../services/userSlice/userSlice';
 
 const App = () => {
   const location = useLocation();
