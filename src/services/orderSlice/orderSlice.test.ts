@@ -25,7 +25,7 @@ describe('orderSlice', () => {
   });
   
   describe('reducer', () => {
-    test('вернуть начальное состояние', () => {
+    test('Возвращение начального состояния', () => {
       expect(orderReducer(undefined, { type: 'unknown' })).toEqual(initialState);
     });
   

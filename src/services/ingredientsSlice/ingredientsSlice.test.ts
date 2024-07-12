@@ -37,24 +37,24 @@ describe('ingredientsSlice', () => {
     }
   ];
 
-  test('должен обрабатывать начальное состояние', () => {
+  test('Обработка начального состояния', () => {
     expect(ingredientsReducer(undefined, { type: 'unknown' })).toEqual(initialState);
   });
 
-  test('должен обрабатывать getIngredients.pending', () => {
+  test('Обработка getIngredients.pending', () => {
     const action = { type: getIngredients.pending.type };
     const state = ingredientsReducer(initialState, action);
     expect(state.status).toBe(RequestStatus.Loading);
   });
 
-  test('должен обрабатывать getIngredients.fulfilled', () => {
+  test('Обработка getIngredients.fulfilled', () => {
     const action = { type: getIngredients.fulfilled.type, payload: testIngredients };
     const state = ingredientsReducer(initialState, action);
     expect(state.status).toBe(RequestStatus.Success);
     expect(state.data).toEqual(testIngredients);
   });
 
-  test('должен обрабатывать getIngredients.rejected', () => {
+  test('Обработка getIngredients.rejected', () => {
     const action = { type: getIngredients.rejected.type };
     const state = ingredientsReducer(initialState, action);
     expect(state.status).toBe(RequestStatus.Failed);

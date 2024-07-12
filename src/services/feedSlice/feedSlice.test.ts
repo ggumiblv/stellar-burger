@@ -1,6 +1,5 @@
 import feedReducer, { getFeeds, initialState } from './feedSlice';
 import { TOrder, TOrdersData, RequestStatus } from '@utils-types';
-import { createAsyncThunk } from '@reduxjs/toolkit';
 
 describe('feedSlice', () => {
   const testOrder: TOrder = {
